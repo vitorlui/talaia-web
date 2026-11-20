@@ -124,6 +124,16 @@
   }
   .visor figcaption { position: relative; z-index: 1; margin-top: 14px; font-size: 13px; color: var(--suave); text-align: center; }
 
+  .demo { padding: 8px 0 44px; }
+  .demo h2 { font: 600 clamp(22px, 2.4vw, 30px)/1.2 "Poppins", sans-serif; color: #fff; margin: 0 0 8px; }
+  .demo p { color: var(--suave); margin: 0 0 18px; font-size: 15px; }
+  .reproductor {
+    border-radius: 20px; overflow: hidden; background: #000;
+    border: 1px solid rgba(199, 231, 238, 0.22);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55), 0 0 0 6px rgba(255, 255, 255, 0.03);
+  }
+  .reproductor video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+
   .funciones { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 18px 0 56px; }
   .tarjeta {
     background: rgba(255, 255, 255, 0.05);
@@ -193,6 +203,17 @@
         </figure>
       </section>
 
+      <section class="demo" id="demo" aria-labelledby="demo-titulo">
+        <h2 id="demo-titulo" data-i18n="demot">Mira el prototipo en acción</h2>
+        <p data-i18n="demop">Vídeo de 2:35 grabado con el prototipo real, con narración en catalán.</p>
+        <div class="reproductor">
+          <video controls preload="metadata" playsinline poster="assets/demo-poster.jpg" width="1280" height="720">
+            <source src="demo.mp4" type="video/mp4">
+            <a href="demo.mp4">demo.mp4</a>
+          </video>
+        </div>
+      </section>
+
       <section class="funciones" aria-label="Funciones">
         <article class="tarjeta">
           <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18l5-9 4 6 3-4 6 7z"/><path d="M3 18h18"/></svg></div>
@@ -219,7 +240,7 @@
 
     <footer>
       <p>&copy; 2026 Talaia</p>
-      <p data-i18n="creditos">Imagen: captura del prototipo (simulación de ejemplo). Satélite: Esri World Imagery; combustible: ZAFM Europe v1.0 (CC BY 4.0).</p>
+      <p data-i18n="creditos">Imagen: captura del prototipo (simulación de ejemplo). Satélite: Esri World Imagery; combustible: ZAFM Europe v1.0 (CC BY 4.0). Música del vídeo: Kevin MacLeod (incompetech.com), CC BY 4.0.</p>
     </footer>
   </div>
 
@@ -240,7 +261,9 @@
         f3: "A peu o en cotxe, per preparar el pla municipal.",
         f4t: "Realitat virtual",
         f4: "Formació i simulacres sobre el terreny, amb ulleres. En proves.",
-        creditos: "Imatge: captura del prototip (simulació d'exemple). Satèl·lit: Esri World Imagery; combustible: ZAFM Europe v1.0 (CC BY 4.0)."
+        demot: "Mira el prototip en acció",
+        demop: "Vídeo de 2:35 enregistrat amb el prototip real, amb narració en català.",
+        creditos: "Imatge: captura del prototip (simulació d'exemple). Satèl·lit: Esri World Imagery; combustible: ZAFM Europe v1.0 (CC BY 4.0). Música del vídeo: Kevin MacLeod (incompetech.com), CC BY 4.0."
       }
     };
     var ES = {};
